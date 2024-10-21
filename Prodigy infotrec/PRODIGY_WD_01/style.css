@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+}
+
+.glow-effect {
+    height: 100vh;
+    padding-top: 80px; /* For fixed header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.home {
+    background-image: linear-gradient(135deg, #00c6ff, #0072ff); /* Bright Blue */
+}
+
+.about {
+    background-image: linear-gradient(135deg, #ff5f6d, #ffc371); /* Coral to Peach */
+}
+
+.services {
+    background-image: linear-gradient(135deg, #00d2ff, #3a7bd5); /* Sky Blue to Deep Blue */
+}
+
+.contact {
+    background-image: linear-gradient(135deg, #ff6a00, #ee0979); /* Vibrant Orange to Pink */
+}
+
+.glow-effect {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+    }
+}
+
+.scrolled {
+    background-color: #222;
+}
